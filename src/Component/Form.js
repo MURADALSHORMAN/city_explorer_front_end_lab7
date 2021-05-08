@@ -76,7 +76,7 @@ export class form extends React.Component {
 
     updatemovieinfo = async () => {
 
-        const themovieurl = `http://localhost:3020/moive?query=${this.state.location}&limit=8`;
+        const themovieurl = `${process.env.REACT_APP_LOCAL_PORT_MOIVE}?query=${this.state.location}&limit=8`;
         const moviedata = await axios.get(themovieurl)
         // console.log(moviedata.results);
         
